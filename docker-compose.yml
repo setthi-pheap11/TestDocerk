@@ -1,0 +1,10 @@
+version: '3'
+services:
+  tkinter-app:
+    build: .
+    container_name: tkinter-app
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    network_mode: "host"
